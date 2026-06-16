@@ -1,0 +1,141 @@
+.heroSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-dark-warm);
+}
+
+.carouselContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 42, 41, 0.55) 0%,
+    rgba(44, 42, 41, 0.4) 50%,
+    rgba(44, 42, 41, 0.7) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.title {
+  font-family: var(--font-serif), serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--color-cream-white);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 12px rgba(44, 42, 41, 0.3);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-beige-warm);
+  max-width: 700px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(44, 42, 41, 0.3);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 20px;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: var(--transition-fast);
+}
+
+.scrollIndicator:hover {
+  opacity: 1;
+}
+
+.scrollText {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-beige-warm);
+  font-weight: 500;
+}
+
+.scrollArrow {
+  font-size: 1.2rem;
+  color: var(--color-cream-white);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  
+  .subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+  
+  .btnGroup {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 12px;
+  }
+  
+  .scrollIndicator {
+    bottom: 24px;
+  }
+}

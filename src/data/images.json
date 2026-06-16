@@ -1,0 +1,54 @@
+{
+  "hotel": [
+    "/img/hotel1.png",
+    "/img/hotel2.png",
+    "/img/hotel2c.png",
+    "/img/hotel3.png",
+    "/img/hotel4.png",
+    "/img/hotel5.png",
+    "/img/hotel6.png",
+    "/img/hotel7.png",
+    "/img/hotel8.png",
+    "/img/hotel9.png",
+    "/img/hotel10.png",
+    "/img/hotel11.png"
+  ],
+  "boutique": [
+    "/img/boutique1.png",
+    "/img/boutique2.png",
+    "/img/boutique3.png",
+    "/img/boutique4.png",
+    "/img/boutique5.png",
+    "/img/boutique6.png",
+    "/img/boutique7.png",
+    "/img/boutique8.png",
+    "/img/boutique9.png",
+    "/img/boutique10.png"
+  ],
+  "cabana": [
+    "/img/cabana1.png",
+    "/img/cabana2.png",
+    "/img/cabana3.png",
+    "/img/cabana4.png",
+    "/img/cabana5.png",
+    "/img/cabana7.png",
+    "/img/cabana8.png"
+  ],
+  "garden": [
+    "/img/garden1.png",
+    "/img/garden2.png",
+    "/img/garden3.png",
+    "/img/garden4.png",
+    "/img/garden5.png",
+    "/img/garden6.png",
+    "/img/garden7.png"
+  ],
+  "piramide": [
+    "/img/piramide1.png",
+    "/img/piramide2.png",
+    "/img/piramide3.png",
+    "/img/piramide4.png",
+    "/img/piramide5.png",
+    "/img/piramide6.png"
+  ]
+}

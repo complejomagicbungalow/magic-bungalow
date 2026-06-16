@@ -1,0 +1,132 @@
+.detailSection {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.reverse .mediaColumn {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.reverse .infoColumn {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.mediaColumn {
+  width: 100%;
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.categoryLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-olive);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.title {
+  font-family: var(--font-serif), serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--color-dark-warm);
+}
+
+.description {
+  font-size: 1.05rem;
+  color: var(--color-dark-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.capacityRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--color-dark-warm);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--color-arena);
+}
+
+.capacityIcon {
+  color: var(--color-coffee-soft);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.featIcon {
+  color: var(--color-olive);
+  flex-shrink: 0;
+}
+
+.featureText {
+  font-size: 0.95rem;
+  color: var(--color-dark-muted);
+}
+
+.actions {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .detailSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 24px;
+  }
+  
+  .reverse {
+    grid-template-columns: 1fr;
+  }
+  
+  .reverse .mediaColumn {
+    grid-column: auto;
+  }
+
+  .reverse .infoColumn {
+    grid-column: auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

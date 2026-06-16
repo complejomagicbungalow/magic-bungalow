@@ -1,0 +1,278 @@
+/* Resets and Global setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Premium Earthy Color System */
+  --color-beige-warm: #F5F2EB;
+  --color-arena: #E6DFD3;
+  --color-cream-white: #FAF9F6;
+  --color-coffee-soft: #8C7A6B;
+  --color-coffee-dark: #5C4F46;
+  --color-olive: #556B2F;
+  --color-olive-light: #6E8548;
+  --color-terracotta: #C05C46;
+  --color-terracotta-light: #D5725C;
+  --color-gold: #C5A059;
+  --color-dark-warm: #2C2A29;
+  --color-dark-muted: #4A4745;
+  --color-white: #FFFFFF;
+  
+  /* Glassmorphism & Shadow Tokens */
+  --glass-bg: rgba(250, 249, 246, 0.82);
+  --glass-bg-dark: rgba(44, 42, 41, 0.85);
+  --glass-border: rgba(140, 122, 107, 0.15);
+  --shadow-subtle: 0 4px 20px -2px rgba(140, 122, 107, 0.12);
+  --shadow-premium: 0 16px 36px -4px rgba(44, 42, 41, 0.08);
+  --shadow-strong: 0 20px 48px -6px rgba(44, 42, 41, 0.18);
+  
+  /* Layout spacing & transitions */
+  --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 28px;
+  --border-radius-full: 9999px;
+  
+  /* Scroll behavior */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream-white);
+  color: var(--color-dark-warm);
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Selection */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), serif;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-dark-warm);
+}
+
+p {
+  font-size: 1.05rem;
+  color: var(--color-dark-muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-arena);
+  border-radius: var(--border-radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coffee-soft);
+}
+
+/* Structural Components */
+.section {
+  padding: 100px 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section-tight {
+  padding: 60px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+  .section-tight {
+    padding: 40px 16px;
+  }
+}
+
+/* Glassmorphism class */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Utility Animations */
+@keyframes ken-burns {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+.ken-burns {
+  animation: ken-burns 16s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-sutil {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 20px -2px rgba(85, 107, 47, 0.2);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 8px 24px -2px rgba(85, 107, 47, 0.4);
+  }
+}
+
+.pulse-button {
+  animation: pulse-sutil 3s ease-in-out infinite;
+}
+
+/* Premium Buttons & Hover effects */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-olive);
+  color: var(--color-cream-white);
+  padding: 14px 28px;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(85, 107, 47, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-olive-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(85, 107, 47, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: var(--color-dark-warm);
+  padding: 13px 27px;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--color-coffee-soft);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-beige-warm);
+  border-color: var(--color-dark-warm);
+  transform: translateY(-2px);
+}
+
+.btn-terracotta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-terracotta);
+  color: var(--color-cream-white);
+  padding: 14px 28px;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(192, 92, 70, 0.25);
+}
+
+.btn-terracotta:hover {
+  background-color: var(--color-terracotta-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192, 92, 70, 0.35);
+}
+
+/* Section Headings */
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  .section-header p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Accommodation Details Modal/Slideout CSS (if we need toggling or detail slides) */
+.accommodation-detail-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+/* Chatbot bubble transitions */
+.chat-bubble-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Markdown responses inside Chatbot */
+.bot-response p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--color-dark-warm);
+  line-height: 1.5;
+}
+.bot-response p:last-child {
+  margin-bottom: 0;
+}
+.bot-response ul, .bot-response ol {
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+.bot-response li {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
