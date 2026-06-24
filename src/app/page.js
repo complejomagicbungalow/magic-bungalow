@@ -126,7 +126,7 @@ export default function Home() {
 
           {/* 4. Emotional Introduction */}
           <section id="introduction" style={{ backgroundColor: "var(--color-cream-white)" }} className="section">
-            <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "60px", alignItems: "center" }}>
+            <div className="intro-grid">
               
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
