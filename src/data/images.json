@@ -1,4 +1,10 @@
 {
+  "hero": [
+    "/img/hero1.webp",
+    "/img/hero2.webp",
+    "/img/hero3.webp",
+    "/img/hero4.webp"
+  ],
   "hotel": [
     "/img/hotel1.png",
     "/img/hotel2.png",

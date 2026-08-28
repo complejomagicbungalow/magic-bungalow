@@ -12,12 +12,13 @@ function scanAndClassify() {
     console.error('Image directory does not exist:', imgDirectory);
     // Write an empty template to avoid compilation errors
     fs.mkdirSync(outputDirectory, { recursive: true });
-    fs.writeFileSync(outputFile, JSON.stringify({ hotel: [], boutique: [], cabana: [], garden: [], piramide: [] }, null, 2));
+    fs.writeFileSync(outputFile, JSON.stringify({ hero: [], hotel: [], boutique: [], cabana: [], garden: [], piramide: [] }, null, 2));
     return;
   }
 
   const files = fs.readdirSync(imgDirectory);
   const categories = {
+    hero: [],
     hotel: [],
     boutique: [],
     cabana: [],
@@ -34,7 +35,9 @@ function scanAndClassify() {
     const name = file.toLowerCase();
     
     // Classify based on prefix
-    if (name.startsWith('boutique')) {
+    if (name.startsWith('hero')) {
+      categories.hero.push(`/img/${file}`);
+    } else if (name.startsWith('boutique')) {
       categories.boutique.push(`/img/${file}`);
     } else if (name.startsWith('cabana')) {
       categories.cabana.push(`/img/${file}`);
@@ -54,6 +57,7 @@ function scanAndClassify() {
   });
 
   console.log('Classification complete:', {
+    hero: categories.hero.length,
     hotel: categories.hotel.length,
     boutique: categories.boutique.length,
     cabana: categories.cabana.length,

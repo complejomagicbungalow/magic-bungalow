@@ -122,7 +122,7 @@ export default function Home() {
           <Header language={language} setLanguage={handleSetLanguage} whatsappUrl={whatsappUrl} />
 
           {/* 3. Hero Carousel Section */}
-          <HeroCarousel images={images.hotel} language={language} whatsappUrl={whatsappUrl} />
+          <HeroCarousel images={images.hero && images.hero.length > 0 ? images.hero : images.hotel} language={language} whatsappUrl={whatsappUrl} />
 
           {/* 4. Emotional Introduction */}
           <section id="introduction" style={{ backgroundColor: "var(--color-cream-white)" }} className="section">

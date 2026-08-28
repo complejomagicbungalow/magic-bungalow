@@ -14,6 +14,7 @@ export async function GET() {
 
     const files = fs.readdirSync(imgDir);
     const categories = {
+      hero: [],
       hotel: [],
       boutique: [],
       cabana: [],
@@ -28,7 +29,9 @@ export async function GET() {
       }
 
       const name = file.toLowerCase();
-      if (name.startsWith('boutique')) {
+      if (name.startsWith('hero')) {
+        categories.hero.push(`/img/${file}`);
+      } else if (name.startsWith('boutique')) {
         categories.boutique.push(`/img/${file}`);
       } else if (name.startsWith('cabana')) {
         categories.cabana.push(`/img/${file}`);
