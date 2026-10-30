@@ -1,8 +1,8 @@
 export const TRANSLATIONS = {
   es: {
     seo: {
-      title: "Magic Bungalow | Hotel Boutique, Glamping y Cabaña en Villa de Leyva",
-      description: "Vive una escapada mágica en Villa de Leyva. Magic Bungalow ofrece hotel boutique, glampings románticos y cabaña familiar para 5 personas, ideal para aniversarios, cumpleaños, pedidas de mano, luna de miel y viajes familiares."
+      title: "Magic Bungalow | Glampings con Jacuzzi en Villa de Leyva",
+      description: "Glampings románticos y pet friendly en Villa de Leyva: Bungalow Garden y Bungalow Pyramid, con jacuzzi, atardeceres y noches estrelladas. Ideal para aniversarios, cumpleaños, pedidas de mano y escapadas en pareja."
     },
     nav: {
       home: "Inicio",
@@ -23,25 +23,21 @@ export const TRANSLATIONS = {
     intro: {
       welcome: "BIENVENIDO A MAGIC BUNGALOW",
       title: "Un oasis de paz y romance en Villa de Leyva",
-      text1: "Bienvenido a Magic Bungalow, un hotel campestre en Villa de Leyva creado para quienes buscan descanso, naturaleza, privacidad y experiencias memorables. A pocos minutos del centro histórico, combinamos la calidez de un hotel boutique, la magia de dos glampings románticos y la comodidad de una cabaña familiar para 5 personas.",
+      text1: "Bienvenido a Magic Bungalow, un refugio de glampings en Villa de Leyva creado para quienes buscan descanso, naturaleza, privacidad y experiencias memorables. A pocos minutos del centro histórico, te esperan dos glampings románticos y privados, Garden y Pyramid, pensados para vivir momentos únicos en pareja.",
       text2: "Aquí podrás desconectarte de la rutina, celebrar fechas especiales y disfrutar el encanto de Boyacá en un entorno tranquilo, romántico y natural.",
       badgeNature: "Naturaleza",
-      badgeFireplace: "Chimenea",
+      badgeFireplace: "Fogata",
       badgeRomance: "Romance",
       badgeRest: "Descanso"
     },
     accommodations: {
       title: "Nuestros Alojamientos",
-      subtitle: "Habitaciones boutique y bungalows diseñados con un encanto exclusivo para cada tipo de viajero.",
+      subtitle: "Dos glampings románticos y privados, diseñados con un encanto exclusivo para vivir una experiencia inolvidable en pareja.",
       btnViewMore: "Ver detalles",
       btnBookNow: "Reservar",
       capacity: "Capacidad:",
       detailsTitle: "Servicios y características",
       list: {
-        boutique: {
-          title: "Hotel Boutique",
-          shortDesc: "Habitaciones boutique con baño privado y chimenea, rodeadas de naturaleza. Ideales para parejas, aniversarios y escapadas tranquilas."
-        },
         garden: {
           title: "Garden Bungalow",
           shortDesc: "Glamping romántico rodeado de naturaleza, ideal para aniversarios, pedidas de mano, cumpleaños y escapadas en pareja."
@@ -49,17 +45,13 @@ export const TRANSLATIONS = {
         piramide: {
           title: "Pyramid Bungalow",
           shortDesc: "Un glamping diferente y privado, con diseño único y ambiente romántico para vivir una experiencia inolvidable."
-        },
-        cabana: {
-          title: "Cabaña Familiar",
-          shortDesc: "Cabaña familiar para hasta 5 personas, ideal para familias, amigos, cumpleaños y escapadas campestres."
         }
       }
     },
     celebrations: {
       title: "Celebraciones Especiales",
       subtitle: "Momentos mágicos que merecen ser recordados para siempre.",
-      text: "Celebra los momentos más importantes en un lugar mágico. Magic Bungalow es el escenario ideal para aniversarios, cumpleaños, pedidas de mano, matrimonios íntimos, noche de bodas, luna de miel y escapadas románticas. Nuestro ambiente natural, la privacidad de los alojamientos, las chimeneas, los espacios al aire libre y la tranquilidad de Villa de Leyva crean el entorno perfecto para sorprender, celebrar y recordar.",
+      text: "Celebra los momentos más importantes en un lugar mágico. Magic Bungalow es el escenario ideal para aniversarios, cumpleaños, pedidas de mano, matrimonios íntimos, noche de bodas, luna de miel y escapadas románticas. Nuestro ambiente natural, la privacidad de los alojamientos, las fogatas, los espacios al aire libre y la tranquilidad de Villa de Leyva crean el entorno perfecto para sorprender, celebrar y recordar.",
       btnPlan: "Quiero planear una sorpresa"
     },
     experience: {
@@ -69,8 +61,8 @@ export const TRANSLATIONS = {
     },
     tourism: {
       title: "Descubre Villa de Leyva",
-      subtitle: "Atractivos turísticos y planes cerca de nuestro hotel campestre.",
-      text: "Magic Bungalow es un punto de partida ideal para descubrir Villa de Leyva y sus alrededores. Desde nuestro hotel campestre puedes disfrutar la tranquilidad de la naturaleza y estar cerca de algunos de los atractivos turísticos más representativos de Boyacá. Visita el centro histórico, camina por la Plaza Mayor, descubre la magia de Iguaque, disfruta las Cascadas de La Periquera, conoce Pozos Azules, Casa Terracota, el Museo Paleontológico, la zona del Fósil y complementa tu viaje con una visita a Ráquira, famosa por sus artesanías y colores.",
+      subtitle: "Atractivos turísticos y planes cerca de nuestros glampings.",
+      text: "Magic Bungalow es un punto de partida ideal para descubrir Villa de Leyva y sus alrededores. Desde nuestros glampings puedes disfrutar la tranquilidad de la naturaleza y estar cerca de algunos de los atractivos turísticos más representativos de Boyacá. Visita el centro histórico, camina por la Plaza Mayor, descubre la magia de Iguaque, disfruta las Cascadas de La Periquera, conoce Pozos Azules, Casa Terracota, el Museo Paleontológico, la zona del Fósil y complementa tu viaje con una visita a Ráquira, famosa por sus artesanías y colores.",
       btnPlanTrip: "Planea tu viaje a Villa de Leyva"
     },
     gallery: {
@@ -83,15 +75,15 @@ export const TRANSLATIONS = {
       items: [
         {
           q: "¿Dónde queda Magic Bungalow?",
-          a: "Magic Bungalow está ubicado en Villa de Leyva, Boyacá, a pocos minutos del centro histórico. Es un hotel campestre ideal para descansar, celebrar fechas especiales y disfrutar la naturaleza."
+          a: "Magic Bungalow está ubicado en Villa de Leyva, Boyacá, a pocos minutos del centro histórico. Es un refugio de glampings ideal para descansar, celebrar fechas especiales y disfrutar la naturaleza."
         },
         {
           q: "¿Magic Bungalow tiene glamping?",
           a: "Sí. Magic Bungalow cuenta con dos alojamientos tipo glamping: Garden Bungalow y Pyramid Bungalow, ideales para parejas y escapadas románticas."
         },
         {
-          q: "¿El hotel tiene cabaña familiar?",
-          a: "Sí. Magic Bungalow cuenta con una cabaña familiar para hasta 5 personas, ideal para familias o grupos de amigos."
+          q: "¿Puedo ir con mi mascota?",
+          a: "Sí. Nuestros glampings son pet friendly: tu perro o tu gato también son bienvenidos. Escríbenos por WhatsApp antes de llegar para preparar todo."
         },
         {
           q: "¿Es un buen lugar para aniversarios o pedidas de mano?",
@@ -128,13 +120,13 @@ export const TRANSLATIONS = {
       quickLinks: "Enlaces rápidos",
       contact: "Contacto",
       rights: "Todos los derechos reservados.",
-      seoText: "Magic Bungalow es un hotel boutique, glamping y cabaña familiar en Villa de Leyva, ideal para escapadas románticas, aniversarios, pedidas de mano, luna de miel, viajes familiares y turismo en Boyacá."
+      seoText: "Magic Bungalow ofrece glampings románticos y pet friendly en Villa de Leyva, ideales para escapadas en pareja, aniversarios, pedidas de mano, luna de miel y turismo en Boyacá."
     }
   },
   en: {
     seo: {
-      title: "Magic Bungalow | Boutique Hotel, Glamping and Cabin in Villa de Leyva",
-      description: "Enjoy a magical stay in Villa de Leyva. Magic Bungalow offers boutique rooms, romantic glamping stays and a family cabin for up to 5 guests, ideal for anniversaries, proposals, honeymoons and family trips."
+      title: "Magic Bungalow | Glampings with Jacuzzi in Villa de Leyva",
+      description: "Romantic, pet-friendly glampings in Villa de Leyva: Garden Bungalow and Pyramid Bungalow, with jacuzzi, sunsets and starry nights. Ideal for anniversaries, birthdays, proposals and couples' getaways."
     },
     nav: {
       home: "Home",
@@ -155,25 +147,21 @@ export const TRANSLATIONS = {
     intro: {
       welcome: "WELCOME TO MAGIC BUNGALOW",
       title: "An Oasis of Peace and Romance in Villa de Leyva",
-      text1: "Welcome to Magic Bungalow, a countryside hotel in Villa de Leyva created for travelers seeking relaxation, nature, privacy and memorable experiences. Just a few minutes from the historic town center, we combine the warmth of a boutique hotel, the magic of two romantic glamping stays and the comfort of a family cabin for up to 5 guests.",
+      text1: "Welcome to Magic Bungalow, a glamping retreat in Villa de Leyva created for travelers seeking relaxation, nature, privacy and memorable experiences. Just a few minutes from the historic town center, two romantic and private glampings, Garden and Pyramid, are waiting for you to share unique moments as a couple.",
       text2: "Here you can disconnect from routine, celebrate special moments and enjoy the charm of Boyacá in a peaceful, romantic and natural setting.",
       badgeNature: "Nature",
-      badgeFireplace: "Fireplace",
+      badgeFireplace: "Firepit",
       badgeRomance: "Romance",
       badgeRest: "Relaxation"
     },
     accommodations: {
       title: "Our Accommodations",
-      subtitle: "Boutique rooms and bungalows designed with exclusive charm for every type of traveler.",
+      subtitle: "Two romantic and private glampings, designed with exclusive charm for an unforgettable couples' experience.",
       btnViewMore: "View details",
       btnBookNow: "Book",
       capacity: "Capacity:",
       detailsTitle: "Amenities & features",
       list: {
-        boutique: {
-          title: "Boutique Hotel",
-          shortDesc: "Boutique rooms with private bathroom and fireplace, surrounded by nature. Ideal for couples, anniversaries and peaceful getaways."
-        },
         garden: {
           title: "Garden Bungalow",
           shortDesc: "A romantic glamping stay surrounded by nature, ideal for anniversaries, proposals, birthdays and couples’ getaways."
@@ -181,17 +169,13 @@ export const TRANSLATIONS = {
         piramide: {
           title: "Pyramid Bungalow",
           shortDesc: "A unique and private glamping stay with a romantic atmosphere for an unforgettable experience."
-        },
-        cabana: {
-          title: "Family Cabin",
-          shortDesc: "Family cabin for up to 5 guests, ideal for families, friends, birthdays and countryside getaways."
         }
       }
     },
     celebrations: {
       title: "Special Celebrations",
       subtitle: "Magical moments that deserve to be remembered forever.",
-      text: "Celebrate life’s most meaningful moments in a magical place. Magic Bungalow is the perfect setting for anniversaries, birthdays, proposals, intimate weddings, wedding nights, honeymoons and romantic getaways. Our natural surroundings, private accommodations, fireplaces, outdoor spaces and the peaceful atmosphere of Villa de Leyva create the perfect environment to surprise, celebrate and remember.",
+      text: "Celebrate life’s most meaningful moments in a magical place. Magic Bungalow is the perfect setting for anniversaries, birthdays, proposals, intimate weddings, wedding nights, honeymoons and romantic getaways. Our natural surroundings, private accommodations, firepits, outdoor spaces and the peaceful atmosphere of Villa de Leyva create the perfect environment to surprise, celebrate and remember.",
       btnPlan: "Plan a surprise"
     },
     experience: {
@@ -201,13 +185,13 @@ export const TRANSLATIONS = {
     },
     tourism: {
       title: "Discover Villa de Leyva",
-      subtitle: "Tourist attractions and tours near our countryside hotel.",
-      text: "Magic Bungalow is an ideal starting point to discover Villa de Leyva and its surroundings. From our countryside hotel, you can enjoy the peace of nature while staying close to some of Boyacá’s most iconic tourist attractions. Visit the historic town center, walk through Plaza Mayor, discover the magic of Iguaque, explore La Periquera waterfalls, Pozos Azules, Casa Terracota, the Paleontological Museum, the Fossil area and complete your trip with a visit to Ráquira, famous for its crafts and colorful streets.",
+      subtitle: "Tourist attractions and tours near our glampings.",
+      text: "Magic Bungalow is an ideal starting point to discover Villa de Leyva and its surroundings. From our glampings, you can enjoy the peace of nature while staying close to some of Boyacá’s most iconic tourist attractions. Visit the historic town center, walk through Plaza Mayor, discover the magic of Iguaque, explore La Periquera waterfalls, Pozos Azules, Casa Terracota, the Paleontological Museum, the Fossil area and complete your trip with a visit to Ráquira, famous for its crafts and colorful streets.",
       btnPlanTrip: "Plan your trip to Villa de Leyva"
     },
     gallery: {
       title: "Moments to experience at Magic Bungalow",
-      subtitle: "A glimpse of the comfort, peace, and romance throughout our hotel."
+      subtitle: "A glimpse of the comfort, peace, and romance at Magic Bungalow."
     },
     faq: {
       title: "Frequently Asked Questions",
@@ -215,15 +199,15 @@ export const TRANSLATIONS = {
       items: [
         {
           q: "Where is Magic Bungalow located?",
-          a: "Magic Bungalow is located in Villa de Leyva, Boyacá, just a few minutes from the historic town center. It is a countryside hotel ideal for relaxation, special celebrations and nature experiences."
+          a: "Magic Bungalow is located in Villa de Leyva, Boyacá, just a few minutes from the historic town center. It is a glamping retreat ideal for relaxation, special celebrations and nature experiences."
         },
         {
           q: "Does Magic Bungalow offer glamping?",
           a: "Yes. Magic Bungalow offers two glamping accommodations: Garden Bungalow and Pyramid Bungalow, ideal for couples and romantic getaways."
         },
         {
-          q: "Does the hotel have a family cabin?",
-          a: "Yes. Magic Bungalow has a family cabin for up to 5 guests, ideal for families or groups of friends."
+          q: "Can I bring my pet?",
+          a: "Yes. Our glampings are pet friendly: your dog or cat is welcome too. Message us on WhatsApp before you arrive so we can get everything ready."
         },
         {
           q: "Is it a good place for anniversaries or proposals?",
@@ -260,7 +244,7 @@ export const TRANSLATIONS = {
       quickLinks: "Quick links",
       contact: "Contact",
       rights: "All rights reserved.",
-      seoText: "Magic Bungalow is a boutique hotel, glamping and family cabin experience in Villa de Leyva, ideal for romantic getaways, anniversaries, proposals, honeymoons, family trips and tourism in Boyacá."
+      seoText: "Magic Bungalow offers romantic, pet-friendly glampings in Villa de Leyva, ideal for couples' getaways, anniversaries, proposals, honeymoons and tourism in Boyacá."
     }
   }
 };

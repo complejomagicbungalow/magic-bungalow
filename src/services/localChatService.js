@@ -11,10 +11,6 @@ export function getLocalResponse(message, language = 'es') {
   };
 
   // 1. Specific accommodations
-  if (matches(['boutique', 'habitación boutique', 'habitacion boutique', 'rooms boutique'])) {
-    return `${k.accommodations.boutique.name}: ${k.accommodations.boutique.description}\n\n✨ **${currentLang === 'es' ? 'Características' : 'Features'}:**\n${k.accommodations.boutique.features.map(f => `• ${f}`).join('\n')}\n👥 *${k.accommodations.boutique.capacity}*`;
-  }
-
   if (matches(['garden', 'glamping garden', 'garden bungalow'])) {
     return `${k.accommodations.garden.name}: ${k.accommodations.garden.description}\n\n✨ **${currentLang === 'es' ? 'Características' : 'Features'}:**\n${k.accommodations.garden.features.map(f => `• ${f}`).join('\n')}\n👥 *${k.accommodations.garden.capacity}*`;
   }
@@ -23,8 +19,12 @@ export function getLocalResponse(message, language = 'es') {
     return `${k.accommodations.piramide.name}: ${k.accommodations.piramide.description}\n\n✨ **${currentLang === 'es' ? 'Características' : 'Features'}:**\n${k.accommodations.piramide.features.map(f => `• ${f}`).join('\n')}\n👥 *${k.accommodations.piramide.capacity}*`;
   }
 
-  if (matches(['cabaña', 'cabana', 'familiar', 'family', 'cabaña familiar'])) {
-    return `${k.accommodations.cabana.name}: ${k.accommodations.cabana.description}\n\n✨ **${currentLang === 'es' ? 'Características' : 'Features'}:**\n${k.accommodations.cabana.features.map(f => `• ${f}`).join('\n')}\n👥 *${k.accommodations.cabana.capacity}*`;
+  if (matches(['boutique', 'hotel boutique', 'cabaña', 'cabana', 'cabin', 'familiar', 'family'])) {
+    return `${k.hotelInfo.notAvailable}\n\n${currentLang === 'es' ? 'Te recomiendo nuestros glampings' : 'We recommend our glampings'}: **${k.accommodations.garden.name}** ${currentLang === 'es' ? 'y' : 'and'} **${k.accommodations.piramide.name}**. ${currentLang === 'es' ? '¿Quieres que te cuente más de alguno?' : 'Would you like to know more about one of them?'}`;
+  }
+
+  if (matches(['mascota', 'mascotas', 'perro', 'perrito', 'gato', 'gatico', 'pet', 'pets', 'dog', 'cat', 'pet friendly'])) {
+    return `🐾 ${k.hotelInfo.petPolicy}\n\n💬 *${currentLang === 'es' ? 'Escríbenos por WhatsApp para reservar con tu mascota.' : 'Message us on WhatsApp to book with your pet.'}*`;
   }
 
   // 2. General Glamping
@@ -37,8 +37,8 @@ export function getLocalResponse(message, language = 'es') {
   // 3. General Accommodations
   if (matches(['alojamiento', 'alojamientos', 'habitación', 'habitacion', 'habitaciones', 'rooms', 'room', 'cabins', 'cabin', 'donde dormir', 'hospedar', 'stay'])) {
     return currentLang === 'es'
-      ? `En **Magic Bungalow** ofrecemos 4 tipos de alojamiento rodeados de naturaleza boyacense:\n\n• **${k.accommodations.boutique.name}**: Habitaciones con chimenea para parejas.\n• **${k.accommodations.garden.name}**: Glamping romántico con fogata.\n• **${k.accommodations.piramide.name}**: Glamping con diseño piramidal único.\n• **${k.accommodations.cabana.name}**: Cabaña privada para hasta 5 personas.\n\n¿Cuál te interesa explorar?`
-      : `At **Magic Bungalow** we offer 4 types of accommodations surrounded by Boyacá nature:\n\n• **${k.accommodations.boutique.name}**: Boutique rooms with fireplaces for couples.\n• **${k.accommodations.garden.name}**: Romantic glamping with private firepit.\n• **${k.accommodations.piramide.name}**: Glamping with unique pyramid design.\n• **${k.accommodations.cabana.name}**: Private cabin for up to 5 guests.\n\nWhich one would you like to explore?`;
+      ? `En **Magic Bungalow** ofrecemos dos glampings románticos rodeados de naturaleza boyacense:\n\n• **${k.accommodations.garden.name}**: Glamping romántico con fogata.\n• **${k.accommodations.piramide.name}**: Glamping con diseño piramidal único.\n\nAmbos son para parejas y pet friendly. ¿Cuál te interesa explorar?`
+      : `At **Magic Bungalow** we offer two romantic glampings surrounded by Boyacá nature:\n\n• **${k.accommodations.garden.name}**: Romantic glamping with private firepit.\n• **${k.accommodations.piramide.name}**: Glamping with unique pyramid design.\n\nBoth are for couples and pet friendly. Which one would you like to explore?`;
   }
 
   // 4. Celebrations
@@ -59,8 +59,8 @@ export function getLocalResponse(message, language = 'es') {
   // 7. General Greetings
   if (matches(['hola', 'buenos dias', 'buenas tardes', 'buenas noches', 'hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening'])) {
     return currentLang === 'es'
-      ? `¡Hola! Soy Magic Assistant. ¿En qué te puedo ayudar hoy? Puedo darte información de nuestros alojamientos (Hotel Boutique, Glampings y Cabaña), planes de celebración, turismo en Villa de Leyva o guiarte para reservar.`
-      : `Hi! I'm Magic Assistant. How can I help you today? I can share information about our accommodations (Boutique Hotel, Glampings, and Cabin), special celebration plans, local tourism, or guide you to book.`;
+      ? `¡Hola! Soy Magic Assistant. ¿En qué te puedo ayudar hoy? Puedo darte información de nuestros glampings (Garden y Pyramid), planes de celebración, turismo en Villa de Leyva o guiarte para reservar.`
+      : `Hi! I'm Magic Assistant. How can I help you today? I can share information about our glampings (Garden and Pyramid), special celebration plans, local tourism, or guide you to book.`;
   }
 
   // 8. Default fallback

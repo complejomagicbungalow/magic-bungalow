@@ -90,18 +90,14 @@ export default function Home() {
   const getAccommodationFeatures = (key) => {
     if (language === "en") {
       switch (key) {
-        case "boutique": return ["Private Bathroom", "Warm Fireplace", "Garden View", "Breakfast Included"];
         case "garden": return ["Circular Glamping", "Private Firepit", "Stargazing Deck", "Surrounding Forest"];
         case "piramide": return ["Pyramid Architecture", "Glass Viewing Panel", "Intimate Setting", "Deck with Chairs"];
-        case "cabana": return ["Up to 5 Guests", "Equipped Kitchen", "Living Room", "Private Parking"];
         default: return [];
       }
     } else {
       switch (key) {
-        case "boutique": return ["Baño Privado", "Chimenea Cálida", "Vista al Jardín", "Desayuno Incluido"];
         case "garden": return ["Diseño Circular", "Fogata Privada", "Terraza Estrellada", "Bosque Circundante"];
         case "piramide": return ["Diseño Piramidal", "Ventanal de Cristal", "Entorno Íntimo", "Deck con Sillas"];
-        case "cabana": return ["Hasta 5 Personas", "Cocina Equipada", "Sala de Estar", "Parqueadero Privado"];
         default: return [];
       }
     }
@@ -196,18 +192,7 @@ export default function Home() {
               <p>{t.accommodations.subtitle}</p>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "30px" }}>
-              <AccommodationCard
-                title={t.accommodations.list.boutique.title}
-                shortDesc={t.accommodations.list.boutique.shortDesc}
-                image={images.boutique[0] || "/img/boutique1.png"}
-                capacity={language === "en" ? "2 Guests" : "2 Personas"}
-                features={getAccommodationFeatures("boutique")}
-                btnTextMore={t.accommodations.btnViewMore}
-                btnTextBook={t.accommodations.btnBookNow}
-                onMoreClick={() => scrollToSection("boutique")}
-                onBookClick={() => window.open(whatsappUrl, "_blank")}
-              />
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "30px", maxWidth: "820px", margin: "0 auto" }}>
               <AccommodationCard
                 title={t.accommodations.list.garden.title}
                 shortDesc={t.accommodations.list.garden.shortDesc}
@@ -230,38 +215,11 @@ export default function Home() {
                 onMoreClick={() => scrollToSection("piramide")}
                 onBookClick={() => window.open(whatsappUrl, "_blank")}
               />
-              <AccommodationCard
-                title={t.accommodations.list.cabana.title}
-                shortDesc={t.accommodations.list.cabana.shortDesc}
-                image={images.cabana[0] || "/img/cabana1.png"}
-                capacity={language === "en" ? "Up to 5 Guests" : "Hasta 5 Personas"}
-                features={getAccommodationFeatures("cabana")}
-                btnTextMore={t.accommodations.btnViewMore}
-                btnTextBook={t.accommodations.btnBookNow}
-                onMoreClick={() => scrollToSection("cabana")}
-                onBookClick={() => window.open(whatsappUrl, "_blank")}
-              />
             </div>
           </section>
 
           {/* 6. Detailed Room Rows */}
           <div style={{ backgroundColor: "var(--color-cream-white)" }}>
-            <AccommodationDetail
-              id="boutique"
-              title={t.accommodations.list.boutique.title}
-              description={language === "en" 
-                ? "The Magic Bungalow Boutique Hotel offers cozy, private and charming rooms, ideal for couples looking for relaxation, tranquility and a different experience in Villa de Leyva. Every room includes a private bathroom and fireplace, creating a warm and romantic atmosphere for peaceful nights in Boyacá. It is perfect for romantic getaways, anniversaries, birthdays, weekend escapes or travelers who want to stay near the historic town center while remaining connected to nature."
-                : "El Hotel Boutique de Magic Bungalow ofrece habitaciones acogedoras, privadas y llenas de encanto, ideales para parejas que buscan descanso, tranquilidad y una experiencia diferente en Villa de Leyva. Todas las habitaciones cuentan con baño privado y chimenea, creando un ambiente cálido y romántico para disfrutar las noches boyacenses. Es perfecto para escapadas románticas, aniversarios, cumpleaños, descanso de fin de semana o para quienes desean hospedarse cerca del centro histórico sin perder el contacto con la naturaleza."
-              }
-              images={images.boutique}
-              capacity={{ label: t.accommodations.capacity, value: language === "en" ? "Couples (2 Guests)" : "Parejas (2 Personas)" }}
-              features={getAccommodationFeatures("boutique")}
-              whatsappUrl={whatsappUrl}
-              imageOnRight={false}
-              btnText={t.accommodations.btnBookNow}
-              altText="Hotel boutique en Villa de Leyva con chimenea"
-            />
-
             <AccommodationDetail
               id="garden"
               title={t.accommodations.list.garden.title}
@@ -292,22 +250,6 @@ export default function Home() {
               imageOnRight={false}
               btnText={t.accommodations.btnBookNow}
               altText="Glamping Pirámide en Villa de Leyva Pyramid Bungalow"
-            />
-
-            <AccommodationDetail
-              id="cabana"
-              title={t.accommodations.list.cabana.title}
-              description={language === "en"
-                ? "The Magic Bungalow Family Cabin is ideal for families or groups of friends who want to enjoy Villa de Leyva with comfort, privacy and contact with nature. It accommodates up to 5 guests and offers a cozy atmosphere to share, relax and create special memories. It is perfect for family trips, birthday celebrations, short vacations, peaceful weekends or getaways with friends in Boyacá."
-                : "La Cabaña Familiar de Magic Bungalow es ideal para familias o grupos de amigos que desean disfrutar Villa de Leyva con comodidad, privacidad y contacto con la naturaleza. Tiene capacidad para hasta 5 personas y ofrece un ambiente acogedor para compartir, descansar y crear recuerdos especiales. Es perfecta para viajes familiares, celebraciones de cumpleaños, vacaciones cortas, fines de semana de descanso o planes con amigos en Boyacá."
-              }
-              images={images.cabana}
-              capacity={{ label: t.accommodations.capacity, value: language === "en" ? "Up to 5 Guests" : "Hasta 5 Personas" }}
-              features={getAccommodationFeatures("cabana")}
-              whatsappUrl={whatsappUrl}
-              imageOnRight={true}
-              btnText={t.accommodations.btnBookNow}
-              altText="Cabaña familiar en Villa de Leyva 5 personas"
             />
           </div>
 

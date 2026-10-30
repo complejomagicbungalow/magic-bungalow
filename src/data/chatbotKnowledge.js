@@ -1,20 +1,16 @@
-export const WHATSAPP_NUMBER = "573214507618"; // Cambia este número por el número real del hotel (formato internacional sin el signo +)
+export const WHATSAPP_NUMBER = "573214507618"; // Número de WhatsApp de reservas (formato internacional sin el signo +)
 
 export const CHATBOT_KNOWLEDGE = {
   es: {
     hotelInfo: {
       name: "Magic Bungalow",
       location: "Villa de Leyva, Boyacá, Colombia (a pocos minutos del centro histórico)",
-      description: "Un hotel campestre y refugio boutique diseñado para descansar, celebrar el amor y vivir experiencias únicas rodeados de naturaleza. Ofrece una mezcla única de confort colonial y lujo natural.",
-      highlights: ["Naturaleza boyacense", "Tranquilidad y privacidad", "Glampings románticos", "Habitaciones con chimenea", "Cabaña familiar", "Espacio para celebraciones", "Fogatas bajo las estrellas"]
+      description: "Un refugio de glampings románticos y privados, diseñado para descansar, celebrar el amor y vivir experiencias únicas rodeados de naturaleza. Contamos con dos glampings: Garden Bungalow y Pyramid Bungalow.",
+      petPolicy: "Somos pet friendly: los huéspedes pueden venir con su perro o su gato. Recomendamos avisar por WhatsApp antes de llegar.",
+      notAvailable: "El Hotel Boutique y la Cabaña Familiar ya no están disponibles para reservas; hoy ofrecemos únicamente nuestros dos glampings.",
+      highlights: ["Naturaleza boyacense", "Tranquilidad y privacidad", "Glampings románticos", "Jacuzzi", "Pet friendly", "Espacio para celebraciones", "Fogatas bajo las estrellas"]
     },
     accommodations: {
-      boutique: {
-        name: "Hotel Boutique",
-        description: "Habitaciones acogedoras, privadas y llenas de encanto, rodeadas de naturaleza. Cuentan con baño privado y chimenea. Ideales para parejas, aniversarios y escapadas tranquilas en las frías noches boyacenses.",
-        capacity: "Parejas (2 personas)",
-        features: ["Baño privado", "Chimenea", "Entorno natural", "Desayuno incluido"]
-      },
       garden: {
         name: "Garden Bungalow",
         description: "Una experiencia de glamping romántica, privada y en total conexión con la naturaleza. Cuenta con fogata privada y un diseño íntimo ideal para aniversarios, pedidas de mano, noches de bodas o una luna de miel mágica.",
@@ -26,18 +22,12 @@ export const CHATBOT_KNOWLEDGE = {
         description: "Glamping con arquitectura piramidal única y espectacular. Ofrece un espacio muy íntimo, entorno natural y una atmósfera de total tranquilidad, perfecto para desconectarse y reconectar en pareja.",
         capacity: "Parejas (2 personas)",
         features: ["Arquitectura piramidal única", "Ventanal panorámico", "Entorno íntimo", "Noches estrelladas"]
-      },
-      cabana: {
-        name: "Cabaña Familiar",
-        description: "Espaciosa cabaña con capacidad para hasta 5 personas, ideal para viajes familiares, grupos de amigos, vacaciones cortas o fines de semana en Boyacá. Ofrece total privacidad y el confort de un hogar campestre.",
-        capacity: "Hasta 5 personas",
-        features: ["Varias habitaciones/camas", "Cocina equipada", "Sala de estar", "Jardín y zona verde"]
       }
     },
     celebrations: {
       description: "Somos el escenario perfecto para celebrar la vida y el amor. Ofrecemos planes personalizados para aniversarios, cumpleaños, pedidas de mano, matrimonios íntimos, noche de bodas, luna de miel y escapadas románticas.",
       services: [
-        "Decoración romántica especial en la habitación o glamping",
+        "Decoración romántica especial en el glamping",
         "Arreglos florales y velas",
         "Cenas privadas bajo las estrellas",
         "Tablas de quesos y carnes frías",
@@ -82,7 +72,7 @@ export const CHATBOT_KNOWLEDGE = {
       { text: "Ver alojamientos", action: "accommodations" },
       { text: "Celebrar aniversario", action: "anniversary" },
       { text: "Pedida de mano", action: "proposal" },
-      { text: "Viajo en familia", action: "family" },
+      { text: "Viajo con mi mascota", action: "pets" },
       { text: "Turismo cercano", action: "tourism" },
       { text: "Quiero reservar", action: "book" },
       { text: "Hablar por WhatsApp", action: "whatsapp" }
@@ -92,16 +82,12 @@ export const CHATBOT_KNOWLEDGE = {
     hotelInfo: {
       name: "Magic Bungalow",
       location: "Villa de Leyva, Boyacá, Colombia (a few minutes from the historic town center)",
-      description: "A countryside hotel and boutique retreat designed to relax, celebrate love, and enjoy unique experiences surrounded by nature. It offers a unique blend of colonial warmth and natural luxury.",
-      highlights: ["Boyacá nature", "Tranquility & privacy", "Romantic glampings", "Rooms with fireplaces", "Family cabin", "Event spaces", "Bonfires under the stars"]
+      description: "A retreat of romantic, private glampings designed to relax, celebrate love, and enjoy unique experiences surrounded by nature. We have two glampings: Garden Bungalow and Pyramid Bungalow.",
+      petPolicy: "We are pet friendly: guests are welcome to bring their dog or cat. We recommend letting us know on WhatsApp before arrival.",
+      notAvailable: "The Boutique Hotel and the Family Cabin are no longer available for booking; we now offer only our two glampings.",
+      highlights: ["Boyacá nature", "Tranquility & privacy", "Romantic glampings", "Jacuzzi", "Pet friendly", "Event spaces", "Bonfires under the stars"]
     },
     accommodations: {
-      boutique: {
-        name: "Boutique Hotel",
-        description: "Cozy, private, and charming rooms surrounded by nature. They feature a private bathroom and fireplace. Ideal for couples, anniversaries, and peaceful getaways during chilly Boyacá nights.",
-        capacity: "Couples (2 guests)",
-        features: ["Private bathroom", "Fireplace", "Natural surroundings", "Breakfast included"]
-      },
       garden: {
         name: "Garden Bungalow",
         description: "A romantic and private glamping experience in total harmony with nature. Features a private firepit and an intimate layout perfect for anniversaries, proposals, wedding nights, or a magical honeymoon.",
@@ -113,18 +99,12 @@ export const CHATBOT_KNOWLEDGE = {
         description: "Glamping with a unique and spectacular pyramid architecture. It offers an intimate space, natural surroundings, and an atmosphere of absolute peace, perfect for couples to disconnect and reconnect.",
         capacity: "Couples (2 guests)",
         features: ["Unique pyramid architecture", "Panoramic window", "Intimate setting", "Starry nights"]
-      },
-      cabana: {
-        name: "Family Cabin",
-        description: "A spacious cabin accommodating up to 5 guests, ideal for family trips, groups of friends, short vacations, or weekends in Boyacá. It offers total privacy and the comfort of a countryside home.",
-        capacity: "Up to 5 guests",
-        features: ["Multiple rooms/beds", "Fully equipped kitchen", "Living room", "Garden and green areas"]
       }
     },
     celebrations: {
       description: "We are the perfect stage to celebrate life and love. We offer personalized packages for anniversaries, birthdays, proposals, intimate weddings, wedding nights, honeymoons, and romantic getaways.",
       services: [
-        "Special romantic decoration in your room or glamping",
+        "Special romantic decoration in your glamping",
         "Flower arrangements and candles",
         "Private dinners under the stars",
         "Cheese and charcuterie boards",
@@ -169,7 +149,7 @@ export const CHATBOT_KNOWLEDGE = {
       { text: "View accommodations", action: "accommodations" },
       { text: "Celebrate anniversary", action: "anniversary" },
       { text: "Proposal plan", action: "proposal" },
-      { text: "Family trip", action: "family" },
+      { text: "Traveling with my pet", action: "pets" },
       { text: "Nearby attractions", action: "tourism" },
       { text: "I want to book", action: "book" },
       { text: "Chat on WhatsApp", action: "whatsapp" }
