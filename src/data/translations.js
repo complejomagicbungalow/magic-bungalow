@@ -14,7 +14,7 @@ export const TRANSLATIONS = {
       whatsappBtn: "Reservar ahora"
     },
     hero: {
-      title: "Magic Bungalow: hotel boutique, glamping y cabaña familiar en Villa de Leyva",
+      title: "Magic Bungalow: glampings románticos con jacuzzi en Villa de Leyva",
       subtitle: "Un refugio campestre para descansar, celebrar el amor y vivir experiencias únicas rodeadas de naturaleza.",
       btnBook: "Reservar ahora",
       btnView: "Ver alojamientos",
@@ -146,7 +146,7 @@ export const TRANSLATIONS = {
       whatsappBtn: "Book now"
     },
     hero: {
-      title: "Magic Bungalow: Boutique Hotel, Glamping and Family Cabin in Villa de Leyva",
+      title: "Magic Bungalow: Romantic Glampings with Jacuzzi in Villa de Leyva",
       subtitle: "A countryside retreat to relax, celebrate love and enjoy unique experiences surrounded by nature.",
       btnBook: "Book now",
       btnView: "View accommodations",

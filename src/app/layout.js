@@ -1,4 +1,5 @@
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -17,19 +18,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Magic Bungalow | Hotel Boutique, Glamping y Cabaña en Villa de Leyva",
-  description: "Vive una escapada mágica en Villa de Leyva. Magic Bungalow ofrece hotel boutique, glampings románticos y cabaña familiar para 5 personas, ideal para aniversarios, cumpleaños, pedidas de mano, luna de miel y viajes familiares.",
+  metadataBase: new URL("https://www.magicbungalow.com"),
+  title: "Magic Bungalow | Glampings con Jacuzzi en Villa de Leyva",
+  description: "Glampings románticos y pet friendly en Villa de Leyva: Bungalow Garden y Bungalow Pyramid, con jacuzzi, atardeceres y noches estrelladas. Ideal para aniversarios, cumpleaños, pedidas de mano y escapadas en pareja.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Magic Bungalow | Hotel Boutique, Glamping y Cabaña en Villa de Leyva",
-    description: "Vive una escapada mágica en Villa de Leyva. Magic Bungalow ofrece hotel boutique, glampings románticos y cabaña familiar para 5 personas.",
-    url: "https://magicbungalow.com",
+    title: "Magic Bungalow | Glampings con Jacuzzi en Villa de Leyva",
+    description: "Glampings románticos y pet friendly en Villa de Leyva, con jacuzzi y vista a las montañas.",
+    url: "https://www.magicbungalow.com",
     siteName: "Magic Bungalow",
     images: [
       {
-        url: "/img/hotel1.png",
+        url: "/img/garden1.png",
         width: 1200,
         height: 630,
-        alt: "Magic Bungalow Villa de Leyva"
+        alt: "Glamping Magic Bungalow en Villa de Leyva"
       }
     ],
     locale: "es_CO",
@@ -37,28 +42,35 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Magic Bungalow | Hotel Boutique, Glamping y Cabaña en Villa de Leyva",
-    description: "Vive una escapada mágica en Villa de Leyva. Magic Bungalow ofrece hotel boutique, glampings románticos y cabaña familiar.",
-    images: ["/img/hotel1.png"],
+    title: "Magic Bungalow | Glampings con Jacuzzi en Villa de Leyva",
+    description: "Glampings románticos y pet friendly en Villa de Leyva, con jacuzzi y vista a las montañas.",
+    images: ["/img/garden1.png"],
   },
 };
+
+const GA_MEASUREMENT_ID = "G-Z0FWK97GT0";
 
 export default function RootLayout({ children }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Hotel",
+    "@type": "LodgingBusiness",
     "name": "Magic Bungalow",
-    "description": "Magic Bungalow es un hotel boutique, glamping y cabaña familiar en Villa de Leyva, ideal para escapadas románticas, aniversarios, pedidas de mano, luna de miel, viajes familiares y turismo en Boyacá.",
+    "description": "Magic Bungalow ofrece glampings románticos y pet friendly en Villa de Leyva (Bungalow Garden y Bungalow Pyramid), con jacuzzi, ideales para escapadas en pareja, aniversarios, pedidas de mano y luna de miel en Boyacá.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Villa de Leyva",
       "addressRegion": "Boyacá",
       "addressCountry": "CO"
     },
-    "telephone": "+573123456789",
-    "image": "https://magicbungalow.com/img/hotel1.png",
+    "telephone": "+573214507618",
+    "image": "https://www.magicbungalow.com/img/garden1.png",
+    "petsAllowed": true,
     "priceRange": "$$$",
-    "url": "https://magicbungalow.com"
+    "url": "https://www.magicbungalow.com",
+    "sameAs": [
+      "https://www.instagram.com/magicbungalowvilladeleyva/",
+      "https://www.facebook.com/magicbungalowvilla"
+    ]
   };
 
   return (
@@ -69,7 +81,21 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
