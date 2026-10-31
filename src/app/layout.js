@@ -93,6 +93,23 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}');
+
+            // Mide los clics a WhatsApp (enlaces y botones) como evento whatsapp_click
+            (function () {
+              var isWa = function (u) { return /wa\.me|whatsapp\.com/i.test(String(u || '')); };
+              var track = function (u, via) {
+                try { gtag('event', 'whatsapp_click', { link_url: String(u), click_source: via }); } catch (e) {}
+              };
+              document.addEventListener('click', function (e) {
+                var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+                if (a && isWa(a.href)) track(a.href, 'link');
+              }, true);
+              var originalOpen = window.open;
+              window.open = function (u) {
+                if (isWa(u)) track(u, 'button');
+                return originalOpen.apply(window, arguments);
+              };
+            })();
           `}
         </Script>
       </body>
